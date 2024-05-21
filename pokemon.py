@@ -10,7 +10,7 @@ def pokemon_name(pokename):
     #print(pokemon_named)
 
     #Change path for json
-    with open(r"C:\Users\Cm6of\Desktop\bot\en.json", encoding='utf-8') as pokedex: pokemon_list = json.load(pokedex)
+    with open(r"YOUR-PATH-HERE", encoding='utf-8') as pokedex: pokemon_list = json.load(pokedex)
             
 
     input_char_counter = Counter(pokemon_named.lower())
