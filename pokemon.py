@@ -7,8 +7,6 @@ def pokemon_name(pokename):
 
     pokemon_named = re.sub(r'[_\.]+', '', pokename).strip() #Splitting names for Pokemon Name
 
-    #print(pokemon_named)
-
     #Change path for json
     with open(r"YOUR-PATH-HERE", encoding='utf-8') as pokedex: pokemon_list = json.load(pokedex)
             
@@ -19,7 +17,8 @@ def pokemon_name(pokename):
 
     for pokemon in pokemon_list:
         pokemon_counter = Counter(pokemon.lower())
-        #Check if all characters in the input are present in the pokemon name
+        
+        #Check if all characters in the input are present in the Pokemon name
         if all(pokemon_counter[char] >= input_char_counter[char] for char in input_char_counter):
             pokemon_guess.append(pokemon)
 
